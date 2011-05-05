@@ -1,5 +1,5 @@
-TradArmory est un parser écrit en C# avec le .NET Framework 4 Client Profile pour récupérer des informations de traduction depuis l'armurerie officielle ou depuis WoWHead. 
-Il est distribué sous licence GNU GPL    
+TradArmory est un parser Ã©crit en C# avec le .NET Framework 4 Client Profile pour rÃ©cupÃ©rer des informations de traduction depuis l'armurerie officielle ou depuis WoWHead. 
+Il est distribuÃ© sous licence GNU GPL    
 Copyright (C) 2011  Shyax
 
     This program is free software: you can redistribute it and/or modify
