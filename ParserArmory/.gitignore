@@ -1,0 +1,9 @@
+obj
+*.suo
+*.user
+*.cache
+*_ReSharper.*
+*.vs10x
+*.bak
+bin/Debug/*
+bin/Release/*
