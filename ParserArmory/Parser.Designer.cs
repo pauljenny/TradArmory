@@ -35,6 +35,16 @@
             this.textBoxAvancement = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBoxTop = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxDBUsername = new System.Windows.Forms.TextBox();
+            this.textBoxDBPort = new System.Windows.Forms.TextBox();
+            this.textBoxDBHote = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonLancerDB = new System.Windows.Forms.Button();
             this.radioButtonRu = new System.Windows.Forms.RadioButton();
             this.radioButtonES = new System.Windows.Forms.RadioButton();
             this.radioButtonDE = new System.Windows.Forms.RadioButton();
@@ -45,9 +55,12 @@
             this.textBoxIdFin = new System.Windows.Forms.TextBox();
             this.textBoxIdDebut = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.textBoxDBPass = new System.Windows.Forms.TextBox();
+            this.textBoxDBMonde = new System.Windows.Forms.TextBox();
             this.tabPage1.SuspendLayout();
             this.groupBoxAvancement.SuspendLayout();
             this.groupBoxTop.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +68,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(302, 456);
+            this.label3.Location = new System.Drawing.Point(505, 456);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 13);
             this.label3.TabIndex = 2;
@@ -68,7 +81,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(423, 415);
+            this.tabPage1.Size = new System.Drawing.Size(598, 415);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Traduction Objets";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -79,7 +92,7 @@
             this.groupBoxAvancement.Controls.Add(this.progressBar1);
             this.groupBoxAvancement.Location = new System.Drawing.Point(7, 197);
             this.groupBoxAvancement.Name = "groupBoxAvancement";
-            this.groupBoxAvancement.Size = new System.Drawing.Size(401, 215);
+            this.groupBoxAvancement.Size = new System.Drawing.Size(585, 215);
             this.groupBoxAvancement.TabIndex = 1;
             this.groupBoxAvancement.TabStop = false;
             this.groupBoxAvancement.Text = "Avancement";
@@ -92,19 +105,20 @@
             this.textBoxAvancement.Name = "textBoxAvancement";
             this.textBoxAvancement.ReadOnly = true;
             this.textBoxAvancement.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBoxAvancement.Size = new System.Drawing.Size(381, 157);
+            this.textBoxAvancement.Size = new System.Drawing.Size(572, 157);
             this.textBoxAvancement.TabIndex = 5;
             // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(6, 183);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(382, 23);
+            this.progressBar1.Size = new System.Drawing.Size(573, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 4;
             // 
             // groupBoxTop
             // 
+            this.groupBoxTop.Controls.Add(this.groupBox1);
             this.groupBoxTop.Controls.Add(this.radioButtonRu);
             this.groupBoxTop.Controls.Add(this.radioButtonES);
             this.groupBoxTop.Controls.Add(this.radioButtonDE);
@@ -116,9 +130,108 @@
             this.groupBoxTop.Controls.Add(this.textBoxIdDebut);
             this.groupBoxTop.Location = new System.Drawing.Point(6, 6);
             this.groupBoxTop.Name = "groupBoxTop";
-            this.groupBoxTop.Size = new System.Drawing.Size(402, 185);
+            this.groupBoxTop.Size = new System.Drawing.Size(586, 185);
             this.groupBoxTop.TabIndex = 0;
             this.groupBoxTop.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxDBMonde);
+            this.groupBox1.Controls.Add(this.textBoxDBPass);
+            this.groupBox1.Controls.Add(this.textBoxDBUsername);
+            this.groupBox1.Controls.Add(this.textBoxDBPort);
+            this.groupBox1.Controls.Add(this.textBoxDBHote);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.buttonLancerDB);
+            this.groupBox1.Location = new System.Drawing.Point(315, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(265, 172);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Informations de connexion MySQL";
+            // 
+            // textBoxDBUsername
+            // 
+            this.textBoxDBUsername.Location = new System.Drawing.Point(97, 73);
+            this.textBoxDBUsername.Name = "textBoxDBUsername";
+            this.textBoxDBUsername.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDBUsername.TabIndex = 17;
+            this.textBoxDBUsername.Text = "mangos";
+            // 
+            // textBoxDBPort
+            // 
+            this.textBoxDBPort.Location = new System.Drawing.Point(100, 48);
+            this.textBoxDBPort.Name = "textBoxDBPort";
+            this.textBoxDBPort.Size = new System.Drawing.Size(63, 20);
+            this.textBoxDBPort.TabIndex = 16;
+            this.textBoxDBPort.Text = "3306";
+            // 
+            // textBoxDBHote
+            // 
+            this.textBoxDBHote.Location = new System.Drawing.Point(46, 27);
+            this.textBoxDBHote.Name = "textBoxDBHote";
+            this.textBoxDBHote.Size = new System.Drawing.Size(213, 20);
+            this.textBoxDBHote.TabIndex = 15;
+            this.textBoxDBHote.Text = "127.0.0.1";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 124);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Base de données monde :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 99);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Mot de passe :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 74);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Nom d\'utilisateur : ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Port :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Hôte :";
+            // 
+            // buttonLancerDB
+            // 
+            this.buttonLancerDB.Location = new System.Drawing.Point(64, 146);
+            this.buttonLancerDB.Name = "buttonLancerDB";
+            this.buttonLancerDB.Size = new System.Drawing.Size(145, 24);
+            this.buttonLancerDB.TabIndex = 9;
+            this.buttonLancerDB.Text = "Lancer avec la DB";
+            this.buttonLancerDB.UseVisualStyleBackColor = true;
+            this.buttonLancerDB.Click += new System.EventHandler(this.buttonLancerDB_Click);
             // 
             // radioButtonRu
             // 
@@ -165,7 +278,7 @@
             // 
             // buttonLancer
             // 
-            this.buttonLancer.Location = new System.Drawing.Point(186, 109);
+            this.buttonLancer.Location = new System.Drawing.Point(113, 132);
             this.buttonLancer.Name = "buttonLancer";
             this.buttonLancer.Size = new System.Drawing.Size(125, 41);
             this.buttonLancer.TabIndex = 4;
@@ -211,14 +324,31 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(431, 441);
+            this.tabControl1.Size = new System.Drawing.Size(606, 441);
             this.tabControl1.TabIndex = 1;
+            // 
+            // textBoxDBPass
+            // 
+            this.textBoxDBPass.Location = new System.Drawing.Point(97, 96);
+            this.textBoxDBPass.Name = "textBoxDBPass";
+            this.textBoxDBPass.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDBPass.TabIndex = 18;
+            this.textBoxDBPass.Text = "mangos";
+            this.textBoxDBPass.UseSystemPasswordChar = true;
+            // 
+            // textBoxDBMonde
+            // 
+            this.textBoxDBMonde.Location = new System.Drawing.Point(140, 121);
+            this.textBoxDBMonde.Name = "textBoxDBMonde";
+            this.textBoxDBMonde.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDBMonde.TabIndex = 19;
+            this.textBoxDBMonde.Text = "mangos";
             // 
             // Parser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 473);
+            this.ClientSize = new System.Drawing.Size(630, 473);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -230,6 +360,8 @@
             this.groupBoxAvancement.PerformLayout();
             this.groupBoxTop.ResumeLayout(false);
             this.groupBoxTop.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -254,6 +386,18 @@
         private System.Windows.Forms.TextBox textBoxIdFin;
         private System.Windows.Forms.TextBox textBoxIdDebut;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button buttonLancerDB;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBoxDBUsername;
+        private System.Windows.Forms.TextBox textBoxDBPort;
+        private System.Windows.Forms.TextBox textBoxDBHote;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxDBMonde;
+        private System.Windows.Forms.TextBox textBoxDBPass;
     }
 }
 
