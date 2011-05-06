@@ -191,9 +191,9 @@ namespace ParserArmory
                     try
                     {
                         XmlReader reader = XmlReader.Create("http://eu.battle.net/wow/" + _locale + "/item/" + id.ToString());
-                        while (!reader.Value.Contains("subheader color-q"))
+                        while (!reader.Value.Contains("color-q"))
                         {
-                            reader.ReadToFollowing("h3");
+                            reader.ReadToFollowing("h2");
                             reader.MoveToAttribute("class");
                             if (reader.EOF)
                             {
@@ -236,6 +236,10 @@ namespace ParserArmory
                     {
                         // On a une ID inconnue
                         continue;
+                    }
+                    catch (Exception readEx)
+                    {
+                        throw readEx;
                     }
                 }
             }
